@@ -1,0 +1,11 @@
+{
+  "name": "pn2bs",
+  "description": "Predict base-stats and types from the name of Pokemon",
+  "repository": "https://github.com/sfujiwara/pn2bs",
+  "buildpacks": [
+    {
+      "url": "https://github.com/kennethreitz/conda-buildpack"
+    }
+  ],
+  "keywords": ["machine learning", "tensorflow", "pokemon"]
+}
