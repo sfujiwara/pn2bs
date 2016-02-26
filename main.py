@@ -13,7 +13,6 @@ def main():
     poke_name = flask.request.args.get('name')
     res = predictor.predict(poke_name)
     return json.dumps(res, ensure_ascii=False, indent=2)
-    # return flask.jsonify(res)
 
 
 if __name__ == '__main__':
