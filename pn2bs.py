@@ -199,7 +199,7 @@ if __name__ == '__main__':
     sess.run(init)
 
     # Create summary writer and saver
-    summary_writer = tf.train.SummaryWriter('log', graph_def=sess.graph_def)
+    summary_writer = tf.train.SummaryWriter('tflogs', graph_def=sess.graph_def)
     tf.scalar_summary(loss.op.name, loss)
     tf.scalar_summary(loss_bs.op.name, loss_bs)
     tf.scalar_summary(loss_type1.op.name, loss_type1)

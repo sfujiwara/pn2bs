@@ -27,7 +27,7 @@ print res
 ### Run TensorBoard
 
 ```sh
-tensorboard --logdir=<absolute path>/pokename2basestats/log
+tensorboard --logdir=<absolute path>/tflogs
 ```
 
 ## Use as Web API
@@ -42,10 +42,10 @@ python main.py
 
 ### Request
 
-Send GET request as
+For example, send GET request as
 
 ```
-https://pn2bs.herokuapp.com/?name=テンソルフロー
+https://pn2bs.herokuapp.com/pred?name=テンソルフロー
 ```
 
 ### Response
@@ -53,13 +53,13 @@ https://pn2bs.herokuapp.com/?name=テンソルフロー
 ```json
 {
   "name": "テンソルフロー",
-  "hp": 100,
-  "attack": 100,
-  "block": 100,
-  "contact": 100,
-  "defense": 100,
-  "speed": 100,
+  "hp": 92,
+  "attack": 101,
+  "block": 84,
+  "contact": 85,
+  "defense": 65,
+  "speed": 72,
   "type1": "フェアリー",
   "type2": "あく"
-}
+ }
 ```

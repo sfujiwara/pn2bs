@@ -28,13 +28,13 @@ def predict(poke_name):
     pred_type1 = np.argmax(sess.run(y_type1, feed_dict={x_ph: v}))
     pred_type2 = np.argmax(sess.run(y_type2, feed_dict={x_ph: v}))
     result = {
-        'name': poke_name,
-        'hp': float(pred_bs[0][0]),
-        'attack': float(pred_bs[0][1]),
-        'block': float(pred_bs[0][2]),
-        'contact': float(pred_bs[0][3]),
-        'defense': float(pred_bs[0][4]),
-        'speed': float(pred_bs[0][5]),
+        'name': poke_name.encode('utf-8'),
+        'hp': int(pred_bs[0][0]),
+        'attack': int(pred_bs[0][1]),
+        'block': int(pred_bs[0][2]),
+        'contact': int(pred_bs[0][3]),
+        'defense': int(pred_bs[0][4]),
+        'speed': int(pred_bs[0][5]),
         'type1': poketype1_vectorizer.get_feature_names()[pred_type1].split('=')[1],
         'type2': poketype2_vectorizer.get_feature_names()[pred_type2].split('=')[1],
     }
